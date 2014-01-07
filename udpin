@@ -1,0 +1,21 @@
+ServerDebugLevel 3
+ServerPort 4926
+
+ShmBaseName udpin
+
+UdpRxHost 192.168.1.36
+UdpRxPort 8080
+
+UdpRxInterface eth0
+
+# increase network receive buffer for high datarate
+UdpRxBuffer 1024
+
+# 0 -> Auto, 1 -> UDP, 2 -> RTP, 3 -> RTP/FEC (std. Auto)
+UdpRxMode 1
+
+# Buffer reset after usecs (std. 500000)
+Timeout 500000
+
+#Reorder buffer size in RTP mode (min 1, max 255, std. 20)
+RtpReorderBuffer 20
